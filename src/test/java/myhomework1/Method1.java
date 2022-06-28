@@ -71,7 +71,6 @@ public class Method1 {
         }
 
         @Test
-
         public void checkSplit(){
         String text = "My home is my castle";
         String[] sp = text.split(" ");
