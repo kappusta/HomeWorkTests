@@ -5,11 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
-
 public class FindElementsXpath {
     WebDriver driver;
 
-    public void sleep(int sec){
+    public void sleep(int sec) {
         try {
             Thread.sleep(sec * 1000);
         } catch (InterruptedException e) {
@@ -26,7 +25,7 @@ public class FindElementsXpath {
     }
 
     @AfterMethod
-    public void closeBrow(){
+    public void closeBrow() {
         sleep(2);
         driver.get("https://klike.net/4007-ja-molodec-prikolnye-kartinki-50-foto.html");
         sleep(2);
@@ -47,12 +46,4 @@ public class FindElementsXpath {
         driver.findElement(By.xpath("//a[contains(text(),'Sign Up')]")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//button[@id='signup']")).isDisplayed());
     }
-
-  //  @Test
-  //  public void signUp() {
-   //     driver.findElement(By.xpath("//a[@id='menu-signin']")).click();
-   //     driver.findElement(By.xpath("//a[contains(text(),'Sign Up')]")).click();
-   //     Assert.assertTrue(driver.findElement(By.xpath("//button[@id='signup']")).isDisplayed());
-
-    }
-
+}
