@@ -11,7 +11,7 @@ public class FindElementsXpath {
 
     public void sleep(int sec){
         try {
-            Thread.sleep(sec*1000);
+            Thread.sleep(sec * 1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
