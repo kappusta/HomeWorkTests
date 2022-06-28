@@ -2,10 +2,10 @@ package myhomework1;
 
 import org.testng.annotations.Test;
 
-public class Method1 {
+public class TestLoopsArraysStrings {
 
     @Test
-    public static void loop1() {
+    public static void checkVegetablesLoop() {
         for (int i = 0; i <= 100; i++) {
             if (i == 0) {
                 System.out.println(i);
@@ -20,7 +20,7 @@ public class Method1 {
     }
 
     @Test
-    public void loop2() {
+    public void checkReverseString() {
         String text = "I believe I can fly";
         for (int i = text.length(); i >= 0; i--) {
             System.out.println(i);
@@ -31,7 +31,7 @@ public class Method1 {
     }
 
     @Test
-    public void stringsMethods() {
+    public void checkstringsMethods() {
         String text = "just do it";
         char z = '!';
         System.out.println(text + z);
@@ -41,7 +41,7 @@ public class Method1 {
     }
 
     @Test
-    public void checkArray() {
+    public void checkArrayManipulatoins() {
         int[] age = {18, 25, 45};
         System.out.println(age[0]);
         age[0] = 4;
@@ -49,7 +49,7 @@ public class Method1 {
     }
 
     @Test
-    public void checkArrayAgain() {
+    public void checkFillArrayWithZero() {
         int[] age = new int[10];
         age[0] = 1;
         age[5] = 6;
@@ -58,7 +58,7 @@ public class Method1 {
     }
 
     @Test
-    public void checkSplit() {
+    public void checkSplitString() {
         String text = "My home is my castle";
         String[] sp = text.split(" ");
         System.out.println(sp[0]);

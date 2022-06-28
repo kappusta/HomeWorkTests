@@ -3,9 +3,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class TestingEverything {
+public class TestVariables {
     @Test
-    public void doit() {
+    public void runChromDriver() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com");
@@ -16,18 +16,12 @@ public class TestingEverything {
     int v = A + c;
 
     @Test
-    public void pp() {
+    public void checkSumm() {
         int result = summ(20, 30);
         System.out.println(result + 5);
     }
 
     public int summ(int a, int b) {
         return a + b;
-    }
-
-    @Test
-    public void total() {
-        System.out.println(13 % 5);
-        System.out.println(v);
     }
 }

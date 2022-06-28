@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
-public class FindElementsXpath {
+public class TestFindElementsXpath {
     WebDriver driver;
 
     public void sleep(int sec) {
@@ -17,7 +17,7 @@ public class FindElementsXpath {
     }
 
     @BeforeMethod
-    public void setUp() {
+    public void setUpChromeDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         sleep(1);
@@ -25,7 +25,7 @@ public class FindElementsXpath {
     }
 
     @AfterMethod
-    public void closeBrow() {
+    public void closeBrowser() {
         sleep(2);
         driver.get("https://klike.net/4007-ja-molodec-prikolnye-kartinki-50-foto.html");
         sleep(2);
@@ -33,13 +33,13 @@ public class FindElementsXpath {
     }
 
     @Test
-    public void cart() {
+    public void CheckOpeningCart() {
         driver.findElement(By.xpath("//img[@alt='cart']")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//div[@class='widget-header--menu__cart__header']")).isDisplayed());
     }
 
     @Test
-    public void signinPage() {
+    public void CheckSigninAndSignUpPage() {
         driver.findElement(By.xpath("//a[@id='menu-signin']")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//button[@id='signin']")).isDisplayed());
         sleep(4);
