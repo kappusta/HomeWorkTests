@@ -79,10 +79,4 @@ public class Method1 {
                 System.out.println(word);
             }
         }
-
-
-
-
-
     }
-
