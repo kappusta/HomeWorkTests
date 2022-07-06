@@ -33,13 +33,13 @@ public class TestFindElementsXpath {
     }
 
     @Test
-    public void CheckOpeningCart() {
+    public void checkOpeningCart() {
         driver.findElement(By.xpath("//img[@alt='cart']")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//div[@class='widget-header--menu__cart__header']")).isDisplayed());
     }
 
     @Test
-    public void CheckSigninAndSignUpPage() {
+    public void checkSigninAndSignUpPage() {
         driver.findElement(By.xpath("//a[@id='menu-signin']")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//button[@id='signin']")).isDisplayed());
         sleep(4);
